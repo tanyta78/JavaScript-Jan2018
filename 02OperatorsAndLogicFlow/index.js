@@ -111,9 +111,27 @@ function binaryLog(arr) {
 }
 
 //12 Write a JS function to check if a number is prime (only wholly divisible by itself and one).
-function primeNumberChecker(num) {
-    let isPrime = false;
+function primeNumberChecker(n) {
+    let isPrime = true;
+
+    if (n <= 1) {
+        // проверяваме дали числото е единица или отрицателно
+        isPrime = false;
+    }else if (n == 2) {
+        // две е просто число
+        isPrime= true;
+    } else if (n % 2 == 0){
+        //  проверяваме дали числото е четно
+        isPrime = false;
+    } else{
+        //  обхождаме нечетните числа до корен квадратен от числото
+        for (let i = 3; i <= Math.ceil(Math.sqrt(n)); i += 2)        {
+            if (n % i == 0) isPrime = false;
+        }
+    }
+
+    console.log(isPrime ? 'true':'false');
 }
 
-primeNumberChecker(7);
+primeNumberChecker(81)
 
