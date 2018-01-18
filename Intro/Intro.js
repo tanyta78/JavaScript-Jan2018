@@ -60,6 +60,6 @@ function distanceBetweenTwoPoints(x1,y1,x2,y2) {
     return Math.sqrt(distanceX+distanceY);
 }
 
-distanceBetweenTwoPoints(2,4,5,0);
+console.log(distanceBetweenTwoPoints(2, 4, 5, 0));
 
 
