@@ -201,6 +201,23 @@ function formFiller(name,email,phone,textAsArr) {
     
 }
 
+//var2
+function formFiller2(name,email,phone,textAsArr) {
+   textAsArr.forEach(line=>{
+       line = line.replace(/<([!@+])[a-zA-Z]+([!@+])>/g, repl);
+       console.log(line);
+   });
+    
+   function repl(match,p1){
+       switch (p1) {
+           case '!':return username;
+           case '@':return email;
+           case '+':return phone; 
+       }
+   }
+    
+}
+
 //16.	*Match Multiplication
 //You are given a text with numbers multiplied by * in format {num1} * {num2}. Your job is to extract each two numbers in the above format, multiply them and replace them with their product. The first number is integer, can be negative. The second number is integer or floating-point and can be negative. There could be whitespace around the “*” symbol
 
@@ -209,7 +226,7 @@ function matchMultiplication(input) {
     console.log(input);
 }
 
-formFiller('Pesho',
+formFiller2('Pesho',
 'pesho@softuni.bg',
 '90-60-90',
 ['Hello, <!username!>!',
