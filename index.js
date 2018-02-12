@@ -1,8 +1,7 @@
-function solve() {
+function solve(str) {
     
 
-};
+}
 
-solve([
-    
-]);
+solve(
+);
